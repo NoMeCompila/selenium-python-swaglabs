@@ -8,6 +8,7 @@ class LoginPage(BasePage):
     user_name_textbox = (By.ID, "user-name")
     user_pass_textbox = (By.ID, "password")
     login_btn = (By.ID, "login-button")
+    login_msg_error = (By.TAG_NAME, "h3")
 
     # constructor
     def __init__(self, driver):
@@ -24,3 +25,9 @@ class LoginPage(BasePage):
         self.do_send_key(self.user_name_textbox, username)
         self.do_send_key(self.user_pass_textbox, password)
         self.do_click(self.login_btn)
+
+    def click_login_btn(self) -> None:
+        self.do_click(self.login_btn)
+
+    def get_err_mesg(self) -> str:
+        return self.get_text(self.login_msg_error)

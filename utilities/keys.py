@@ -1,10 +1,18 @@
-sauce_url = "https://www.saucedemo.com/"
+# url to practice automation
+sauce_url: str = "https://www.saucedemo.com/"
 
-valid_username = "standard_user"
-valid_user_pwd = "secret_sauce"
-swag_labs_title = "PRODUCTS"
+# users data
+valid_username: str = "standard_user"
+valid_user_pwd: str = "secret_sauce"
+invalid_user_pwd: str = "user123"
+invalid_username: str = "admin"
 
-products_order_a_z = 0
-products_order_z_a = 1
-products_order_price_low = 2
-products_order_price_high = 3
+# texts to validate and compare
+swag_labs_title: str = "PRODUCTS"
+invalid_login_msg: str = "Epic sadface"
+
+# types of products order
+products_order_a_z: int = 0
+products_order_z_a: int = 1
+products_order_price_low: int = 2
+products_order_price_high: int = 3

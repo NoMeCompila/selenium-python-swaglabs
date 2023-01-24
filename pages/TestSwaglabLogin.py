@@ -26,8 +26,10 @@ class LoginPage(BasePage):
         self.do_send_key(self.user_pass_textbox, password)
         self.do_click(self.login_btn)
 
+    # clicks on the logind big red button
     def click_login_btn(self) -> None:
         self.do_click(self.login_btn)
 
+    # returns the error message from an invalid login
     def get_err_mesg(self) -> str:
         return self.get_text(self.login_msg_error)

@@ -29,9 +29,10 @@ class ProductsPage(BasePage):
     def get_all_products(self) -> None:
         print(self.list_all_elements(self.products_locator))
 
+    # returns the first product of the swaglabs home page
+    def get_first_product(self) -> str:
+        return self.get_first_element(self.products_locator)
 
-    def get_first_product(self) -> None:
-        print(self.get_first_element(self.products_locator))
-
-    def get_last_prduct(self) -> None:
-        print(self.get_last_item(self.products_locator))
+    # returns the last product of the swaglabs home page
+    def get_last_prduct(self) -> str:
+        return self.get_last_item(self.products_locator)

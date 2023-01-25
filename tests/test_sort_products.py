@@ -12,12 +12,12 @@ def test_order_a_z(init_driver: WebDriver) -> None:
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.valid_user_pwd)
 
-    produtcs_page = ProductsPage(init_driver)
-    assert produtcs_page.get_title() == keys.swag_labs_title
+    products_page = ProductsPage(init_driver)
+    assert products_page.get_title() == keys.swag_labs_title
 
-    produtcs_page.select_products_order(keys.products_order_a_z)
-    assert produtcs_page.get_first_product() == keys.first_a_z
-    assert keys.last_a_z in produtcs_page.get_last_prduct()
+    products_page.select_products_order(keys.products_order_a_z)
+    assert products_page.get_first_product() == keys.first_a_z
+    assert keys.last_a_z in products_page.get_last_product()
 
 
 @pytest.mark.sort_products
@@ -27,12 +27,12 @@ def test_order_z_a(init_driver: WebDriver) -> None:
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.valid_user_pwd)
 
-    produtcs_page = ProductsPage(init_driver)
-    assert produtcs_page.get_title() == keys.swag_labs_title
+    products_page = ProductsPage(init_driver)
+    assert products_page.get_title() == keys.swag_labs_title
 
-    produtcs_page.select_products_order(keys.products_order_z_a)
-    assert keys.last_a_z in produtcs_page.get_first_product()
-    assert keys.first_a_z in produtcs_page.get_last_prduct()
+    products_page.select_products_order(keys.products_order_z_a)
+    assert keys.last_a_z in products_page.get_first_product()
+    assert keys.first_a_z in products_page.get_last_product()
 
 
 @pytest.mark.sort_products
@@ -42,12 +42,12 @@ def test_order_high_price(init_driver: WebDriver) -> None:
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.valid_user_pwd)
 
-    produtcs_page = ProductsPage(init_driver)
-    assert produtcs_page.get_title() == keys.swag_labs_title
+    products_page = ProductsPage(init_driver)
+    assert products_page.get_title() == keys.swag_labs_title
 
-    produtcs_page.select_products_order(keys.products_order_price_high)
-    assert keys.first_high in produtcs_page.get_first_product()
-    assert keys.last_high in produtcs_page.get_last_prduct()
+    products_page.select_products_order(keys.products_order_price_high)
+    assert keys.first_high in products_page.get_first_product()
+    assert keys.last_high in products_page.get_last_product()
 
 
 @pytest.mark.sort_products
@@ -57,9 +57,9 @@ def test_order_low_price(init_driver: WebDriver) -> None:
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.valid_user_pwd)
 
-    produtcs_page = ProductsPage(init_driver)
-    assert produtcs_page.get_title() == keys.swag_labs_title
+    products_page = ProductsPage(init_driver)
+    assert products_page.get_title() == keys.swag_labs_title
 
-    produtcs_page.select_products_order(keys.products_order_price_low)
-    assert keys.last_high in produtcs_page.get_first_product()
-    assert keys.first_high in produtcs_page.get_last_prduct()
+    products_page.select_products_order(keys.products_order_price_low)
+    assert keys.last_high in products_page.get_first_product()
+    assert keys.first_high in products_page.get_last_product()

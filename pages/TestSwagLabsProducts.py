@@ -1,13 +1,15 @@
 from selenium.webdriver.common.by import By
-
 from pages.BasePage import BasePage
 
 
 class ProductsPage(BasePage):
 
-    title = (By.CLASS_NAME, "title")
-    products_order = (By.CLASS_NAME, "product_sort_container")
-    products_locator = (By.XPATH, "//div[@class='inventory_item_name']")
+    title: tuple = (By.CLASS_NAME, "title")
+    products_order: tuple = (By.CLASS_NAME, "product_sort_container")
+    products_locator: tuple = (By.XPATH, "//div[@class='inventory_item_name']")
+    twitter_locator: tuple = (By.XPATH, "//li[@class='social_twitter']/a")
+    facebook_locator: tuple = (By.XPATH, "//li[@class='social_facebook']/a")
+    linkedin_locator: tuple = (By.XPATH, "//li[@class='social_linkedin']/a")
 
     # constructor
     def __init__(self, driver):
@@ -34,5 +36,19 @@ class ProductsPage(BasePage):
         return self.get_first_element(self.products_locator)
 
     # returns the last product of the swaglabs home page
-    def get_last_prduct(self) -> str:
+    def get_last_product(self) -> str:
         return self.get_last_item(self.products_locator)
+
+    # clicks in tweeter icon
+    def click_tweeter(self) -> None:
+        self.do_click(self.twitter_locator)
+        self.switch_windows(1)
+
+    def click_facebook(self) -> None:
+        self.do_click(self.facebook_locator)
+        self.switch_windows(1)
+
+    def click_linkedin(self) -> None:
+        self.do_click(self.linkedin_locator)
+        self.switch_windows(1)
+

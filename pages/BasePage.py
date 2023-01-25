@@ -10,6 +10,10 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
 
+    # get an URL in str format and goes there
+    def go_to_page(self, url: str) -> None:
+        self.driver.get(url)
+
     # waits for an element then clicks it
     def do_click(self, by_locator: tuple) -> None:
         self.wait.until(EC.element_to_be_clickable(by_locator)).click()
@@ -44,3 +48,12 @@ class BasePage:
     def get_last_item(self, by_locator: tuple) -> str:
         all_elements = self.wait.until(EC.visibility_of_all_elements_located(by_locator))
         return [x.text for x in all_elements][::-1][0]
+
+    def switch_windows(self, index: int):
+        self.driver.switch_to.window(self.driver.window_handles[index])
+
+    def get_page_title(self) -> str:
+        return self.driver.title
+
+    def get_current_url(self) -> str:
+        return self.driver.current_url

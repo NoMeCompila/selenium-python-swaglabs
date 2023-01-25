@@ -25,3 +25,8 @@ last_a_z: str = "Test.allTheThings()"
 first_high: str = "Onesie"
 last_high: str = "Fleece Jacket"
 
+
+# social media
+twitter_url: str = "twitter.com/saucelabs"
+facebook_url: str = "facebook.com/saucelabs"
+linkedin_url: str = "linkedin.com/company/sauce-labs/"

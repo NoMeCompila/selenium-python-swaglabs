@@ -1,6 +1,6 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from pages.TestSwagLabsProducts import ProductsPage
-from pages.TestSwaglabLogin import LoginPage
+from pages.ProductsPage import ProductsPage
+from pages.LoginPage import LoginPage
 import pytest
 from utilities import keys
 
@@ -31,11 +31,6 @@ def test_invalid_pwd(init_driver: WebDriver) -> None:
 @pytest.mark.invalid_login
 @pytest.mark.login
 def test_invalid_username(init_driver: WebDriver) -> None:
-    """
-
-    :param init_driver: WebDriver
-    :return: None
-    """
     login_page = LoginPage(init_driver)
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.invalid_username, keys.valid_user_pwd)

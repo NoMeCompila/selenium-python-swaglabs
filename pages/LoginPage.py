@@ -16,10 +16,6 @@ class LoginPage(BasePage):
 
     # methods
 
-    # get an URL in str format and goes there
-    #def go_to_page(self, url: str) -> None:
-    #    self.driver.get(url)
-
     # search for username and password text box, fills it with the given string parameters then clicks the login button
     def login_swag_labs(self, username: str, password: str) -> None:
         self.do_send_key(self.user_name_textbox, username)

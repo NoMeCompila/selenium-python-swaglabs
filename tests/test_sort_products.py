@@ -1,6 +1,6 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from pages.TestSwagLabsProducts import ProductsPage
-from pages.TestSwaglabLogin import LoginPage
+from pages.ProductsPage import ProductsPage
+from pages.LoginPage import LoginPage
 import pytest
 from utilities import keys
 

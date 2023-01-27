@@ -11,6 +11,12 @@ class ProductsPage(BasePage):
     facebook_locator: tuple = (By.XPATH, "//li[@class='social_facebook']/a")
     linkedin_locator: tuple = (By.XPATH, "//li[@class='social_linkedin']/a")
 
+    # add to cart buttons
+    bolt_tshirt_btn: tuple = (By.ID, "add-to-cart-sauce-labs-bolt-t-shirt")
+    fleece_btn: tuple = (By.ID, "add-to-cart-sauce-labs-fleece-jacket")
+    add_btn: tuple = (By.XPATH, "//div[@class='pricebar']/button")
+    total_cart_items: tuple = (By.XPATH, "//span[@class='shopping_cart_badge']")
+
     # constructor
     def __init__(self, driver):
         super(ProductsPage, self).__init__(driver)
@@ -52,3 +58,14 @@ class ProductsPage(BasePage):
         self.do_click(self.linkedin_locator)
         self.switch_windows(1)
 
+    def add_tshirt(self) -> None:
+        self.do_click(self.products_locator)
+
+    def add_jacket(self) -> None:
+        self.do_click(self.fleece_btn)
+
+    def add_product(self, by_locator: tuple) -> None:
+        self.do_click(by_locator)
+
+    def get_btn_texts(self) -> list:
+        return self.list_all_elements(self.add_btn)

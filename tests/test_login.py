@@ -8,6 +8,7 @@ from utilities import keys
 @pytest.mark.valid_login
 @pytest.mark.login
 def test_login_swag_labs(init_driver: WebDriver) -> None:
+
     login_page = LoginPage(init_driver)
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.valid_user_pwd)
@@ -20,6 +21,7 @@ def test_login_swag_labs(init_driver: WebDriver) -> None:
 @pytest.mark.invalid_login
 @pytest.mark.login
 def test_invalid_pwd(init_driver: WebDriver) -> None:
+
     login_page = LoginPage(init_driver)
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.valid_username, keys.invalid_user_pwd)
@@ -31,6 +33,7 @@ def test_invalid_pwd(init_driver: WebDriver) -> None:
 @pytest.mark.invalid_login
 @pytest.mark.login
 def test_invalid_username(init_driver: WebDriver) -> None:
+
     login_page = LoginPage(init_driver)
     login_page.go_to_page(keys.sauce_url)
     login_page.login_swag_labs(keys.invalid_username, keys.valid_user_pwd)
@@ -42,6 +45,7 @@ def test_invalid_username(init_driver: WebDriver) -> None:
 @pytest.mark.invalid_login
 @pytest.mark.login
 def test_blank_data_login(init_driver: WebDriver) -> None:
+
     login_page = LoginPage(init_driver)
     login_page.go_to_page(keys.sauce_url)
     login_page.click_login_btn()

@@ -45,19 +45,6 @@ class ProductsPage(BasePage):
     def get_last_product(self) -> str:
         return self.get_last_item(self.products_locator)
 
-    # clicks in tweeter icon
-    def click_tweeter(self) -> None:
-        self.do_click(self.twitter_locator)
-        self.switch_windows(1)
-
-    def click_facebook(self) -> None:
-        self.do_click(self.facebook_locator)
-        self.switch_windows(1)
-
-    def click_linkedin(self) -> None:
-        self.do_click(self.linkedin_locator)
-        self.switch_windows(1)
-
     def add_tshirt(self) -> None:
         self.do_click(self.products_locator)
 
@@ -69,3 +56,23 @@ class ProductsPage(BasePage):
 
     def get_btn_texts(self) -> list:
         return self.list_all_elements(self.add_btn)
+
+    # clicks in social media icons
+    def verify_social_media(self, by_locator: tuple) -> None:
+        self.do_click(by_locator)
+        self.switch_windows(1)
+
+
+'''
+    def click_tweeter(self) -> None:
+        self.do_click(self.twitter_locator)
+        self.switch_windows(1)
+
+    def click_facebook(self) -> None:
+        self.do_click(self.facebook_locator)
+        self.switch_windows(1)
+
+    def click_linkedin(self) -> None:
+        self.do_click(self.linkedin_locator)
+        self.switch_windows(1)
+'''

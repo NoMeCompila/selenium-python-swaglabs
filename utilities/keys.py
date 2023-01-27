@@ -9,8 +9,13 @@ invalid_user_pwd: str = "user123"
 invalid_username: str = "admin"
 
 
-# texts to validate and compare
+# pages titles
 swag_labs_title: str = "PRODUCTS"
+cart_title: str = "YOUR CART"
+check_title: str = "CHECKOUT: YOUR INFORMATION"
+overview_title: str = "CHECKOUT: OVERVIEW"
+complete_title: str = "CHECKOUT: COMPLETE!"
+# failed login
 invalid_login_msg: str = "Epic sadface"
 
 
@@ -21,10 +26,9 @@ products_order_price_high: int = 2
 products_order_price_low: int = 3
 
 
-# text in order by
+# products order
 first_a_z: str = "Sauce Labs Backpack"
 last_a_z: str = "Test.allTheThings()"
-
 first_high: str = "Onesie"
 last_high: str = "Fleece Jacket"
 
@@ -34,8 +38,8 @@ twitter_url: str = "twitter.com/saucelabs"
 facebook_url: str = "facebook.com/saucelabs"
 linkedin_url: str = "linkedin.com/company/sauce-labs/"
 
-# check out page
 
+# check out page
 first_name: str = "Fernando"
 last_name: str = "Caballero"
 zip_code: str = "3400"

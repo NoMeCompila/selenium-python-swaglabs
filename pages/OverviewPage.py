@@ -17,13 +17,25 @@ class OverPage(BasePage):
         return sum(list(map(lambda x: float(x.replace("$", "")), self.list_all_elements(by_locator))))
 
     def dollar_to_float(self, by_locator: tuple) -> float:
-        return float(self.get_text(by_locator).replace("$", ""))
+        if "Tax" in self.get_text(by_locator):
+            price = float(self.get_text(by_locator).replace("Tax: $", ""))
+        elif "Total" in self.get_text(by_locator):
+            price = float(self.get_text(by_locator).replace("Total: $", ""))
+        else:
+            price = float(self.get_text(by_locator).replace("$", ""))
+        return price
 
-    def clear_tax(self, by_locator: tuple) -> float:
-        return float(self.get_text(by_locator).replace("Tax: $", ""))
+    def get_total_cost(self, items_locator: tuple, tax_locator: tuple) -> float:
+        return self.get_items_cost(items_locator) + self.dollar_to_float(tax_locator)
+
+'''
+    def dollar_to_float(self, by_locator: tuple) -> float:
+        return float(self.get_text(by_locator).replace("$", ""))
 
     def clear_total(self, by_locator: tuple) -> float:
         return float(self.get_text(by_locator).replace("Total: $", ""))
+        
+    def clear_tax(self, by_locator: tuple) -> float:
+        return float(self.get_text(by_locator).replace("Tax: $", ""))
+'''
 
-    def get_total_cost(self, items_locator: tuple, tax_locator: tuple) -> float:
-        return self.get_items_cost(items_locator) + self.clear_tax(tax_locator)

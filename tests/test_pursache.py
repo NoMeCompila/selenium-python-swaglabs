@@ -38,9 +38,9 @@ def test_buy_products(init_driver: WebDriver) -> None:
     overview_page = OverPage(init_driver)
     assert overview_page.get_text(overview_page.title) == keys.overview_title
     assert len(overview_page.list_all_elements(overview_page.items_price)) == 2
-    assert overview_page.get_items_cost(overview_page.items_price) == 65.98
+    assert overview_page.get_items_cost(overview_page.items_price) == keys.items_price
     assert overview_page.get_total_cost(overview_page.items_price, overview_page.tax_price) == \
-           overview_page.clear_total(overview_page.sumary_total)
+           overview_page.dollar_to_float(overview_page.sumary_total)
     overview_page.do_click(overview_page.finish_btn)
 
     complete_page = CompletePage(init_driver)

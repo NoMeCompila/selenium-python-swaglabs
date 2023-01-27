@@ -43,3 +43,7 @@ linkedin_url: str = "linkedin.com/company/sauce-labs/"
 first_name: str = "Fernando"
 last_name: str = "Caballero"
 zip_code: str = "3400"
+
+
+# total price
+items_price = 65.98

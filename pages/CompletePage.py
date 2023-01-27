@@ -4,7 +4,7 @@ from pages.BasePage import BasePage
 
 class CompletePage(BasePage):
 
-    complete_title: tuple = (By.CLASS_NAME, "title")
+
     complete_cart: tuple = (By.CLASS_NAME, "shopping_cart_link")
 
     def __init__(self, driver):

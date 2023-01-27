@@ -4,7 +4,7 @@ from pages.BasePage import BasePage
 
 class CartPage(BasePage):
 
-    title: tuple = (By.CLASS_NAME, "title")
+
     cart_items: tuple = (By.XPATH, "//div[@class='inventory_item_name']")
     item_price: tuple = (By.XPATH, "//div[@class='inventory_item_price']")
     checkout_btn: tuple = (By.ID, "checkout")

@@ -40,4 +40,3 @@ def test_linkedin(init_driver: WebDriver) -> None:
     products_page = ProductsPage(init_driver)
     products_page.verify_social_media(products_page.linkedin_locator)
     assert keys.linkedin_url in products_page.get_current_url()
-

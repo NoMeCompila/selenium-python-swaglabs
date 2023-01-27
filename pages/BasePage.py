@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
@@ -5,9 +6,12 @@ from selenium.webdriver.support.ui import Select
 
 class BasePage:
 
+    title: tuple = (By.CLASS_NAME, "title")
+
     # constructor defines driver and implicit wait
     def __init__(self, driver):
         self.driver = driver
+        # self.driver.implicitly_wait(5) preguntar
         self.wait = WebDriverWait(self.driver, 10)
 
     # get an URL in str format and goes there
@@ -32,9 +36,9 @@ class BasePage:
 
     # select an option in dropdown web element
     def select_dropdown_opt(self, by_locator: tuple, index: int) -> None:
-        Select(self.wait.until(EC.element_to_be_clickable((by_locator)))).select_by_index(index)
+        Select(self.wait.until(EC.element_to_be_clickable(by_locator))).select_by_index(index)
 
-    # returns a list of all products with the vigen by loator
+    # returns a list of all products with the vigen by locator
     def list_all_elements(self, by_locator: tuple) -> list:
         all_products = self.wait.until(EC.visibility_of_all_elements_located(by_locator))
         return [x.text for x in all_products]
@@ -49,11 +53,14 @@ class BasePage:
         all_elements = self.wait.until(EC.visibility_of_all_elements_located(by_locator))
         return [x.text for x in all_elements][::-1][0]
 
-    def switch_windows(self, index: int):
+    # indicates the driver to switch control of the execution flow to the window at the position of the given index
+    def switch_windows(self, index: int) -> None:
         self.driver.switch_to.window(self.driver.window_handles[index])
 
+    # gets the page title of the current page
     def get_page_title(self) -> str:
         return self.driver.title
 
+    # gets the url of the current page
     def get_current_url(self) -> str:
         return self.driver.current_url

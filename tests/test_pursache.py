@@ -44,7 +44,7 @@ def test_buy_products(init_driver: WebDriver) -> None:
     overview_page.do_click(overview_page.finish_btn)
 
     complete_page = CompletePage(init_driver)
-    assert complete_page.get_text(complete_page.complete_title) == keys.complete_title
+    assert complete_page.get_text(complete_page.title) == keys.complete_title
     assert complete_page.get_text(complete_page.complete_cart) == ""
     print()
     print("TESTS DONE SUCCESSFULLY")

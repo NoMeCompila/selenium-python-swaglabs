@@ -47,3 +47,7 @@ zip_code: str = "3400"
 
 # total price
 items_price = 65.98
+
+
+# blank data error message
+blank_data_error: str = "is required"

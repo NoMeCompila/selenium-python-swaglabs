@@ -4,7 +4,6 @@ from pages.BasePage import BasePage
 
 class ProductsPage(BasePage):
 
-    title: tuple = (By.CLASS_NAME, "title")
     products_order: tuple = (By.CLASS_NAME, "product_sort_container")
     products_locator: tuple = (By.XPATH, "//div[@class='inventory_item_name']")
     twitter_locator: tuple = (By.XPATH, "//li[@class='social_twitter']/a")

@@ -1,0 +1,38 @@
+1675396145409	geckodriver	INFO	Listening on 127.0.0.1:51406
+1675396148480	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51407" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofilerNjMGg"
+1675396149571	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofilerNjMGg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51407/devtools/browser/7e369c8e-3b73-498a-9b05-fcf94ad9821b
+1675396153042	Marionette	INFO	Listening on port 51429
+Read port: 51429
+1675396153096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.saucedemo.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.saucedemo.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1675396154477	Marionette	INFO	Stopped listening on port 51429
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1675396204108	geckodriver	INFO	Listening on 127.0.0.1:51486
+1675396207150	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51487" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofileuqGijp"
+1675396207535	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofileuqGijp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51487/devtools/browser/0af6f5ef-1fa7-464d-bd65-214e555f5856
+1675396209393	Marionette	INFO	Listening on port 51505
+Read port: 51505
+1675396209472	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.saucedemo.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.saucedemo.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1675396210321	Marionette	INFO	Stopped listening on port 51505
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/TerminatorTelemetry.jsm, line 71: AbortError: IOUtils: Shutting down and refusing additional I/O tasks

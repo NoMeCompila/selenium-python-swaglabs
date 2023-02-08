@@ -1,0 +1,25 @@
+1675404281510	geckodriver	INFO	Listening on 127.0.0.1:56591
+1675404284546	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56594" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofileN31kCZ"
+1675404285131	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\FERNAN~1.CAB\\AppData\\Local\\Temp\\rust_mozprofileN31kCZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56594/devtools/browser/35f58486-e997-4c0f-a4d7-054a9a66bc08
+1675404289411	Marionette	INFO	Listening on port 56692
+Read port: 56692
+1675404289769	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.saucedemo.com"
+1675404291905	Marionette	INFO	Stopped listening on port 56687
+console.error: services.settings: 
+  main/query-stripping Signature failed  JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessageJavaScript error: resource://gre/actors/ContentM
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+C I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.log: "RemoteSettingsWorker error: AbortError: IndexedDB:  execute() A 
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+utdownVR) Channel closing: too late to send/recv, messages will be lost
+
+send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+

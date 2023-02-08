@@ -1,6 +1,6 @@
 # url to practice automation
 sauce_url: str = "https://www.saucedemo.com/"
-
+amazon_url: str = "https://www.amazon.com/-/es/"
 
 # users data
 valid_username: str = "standard_user"
@@ -51,3 +51,13 @@ items_price = 65.98
 
 # blank data error message
 blank_data_error: str = "is required"
+
+# AMAZON
+login_title: str = "Inicia sesión para vivir tu mejor experiencia"
+
+# searches
+core_i5 = "core i5"
+
+
+# results
+res: str = "RESULTADOS"

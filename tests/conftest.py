@@ -7,19 +7,15 @@ from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
+# gives a json file path as a parametter and load in a python data object
+def load_data(path):
+    with open(path) as data_file:
+        data = json.load(data_file)
+    return data
+
+
 @pytest.fixture()
 def config(scope="session"):
-    """Fixture to load and return the configuration data.
-    The fixture loads the data from a JSON file located at given path and returns it as a dictionary.
-    Before returning the configuration data, the fixture asserts that the "browser" value is either
-    "Firefox", "Chrome", or "Headless Chrome".
-    Args:
-        scope: The scope of the fixture, default is "session".
-    Returns:
-        A dictionary containing the configuration data.
-    Raises:
-        AssertionError: If the "browser" value in the configuration file is not Firefox, Chrome, or Headless Chrome.
-    """
     with open("C:/Users/fernando.caballero/PycharmProjects/selenium-python/config.json") as config_file:
         config = json.load(config_file)
     assert config["browser"] in ["Firefox", "Chrome", "Edge", "Headless Chrome"], f"Invalid browser value in " \
